@@ -1,0 +1,9 @@
+{
+  "mode": "ok",
+  "schema_version": 1,
+  "etag": "status-ok-2026-06-04T00:00:00Z",
+  "severity": "info",
+  "blocking": false,
+  "dismiss_until_etag_change": false,
+  "disabled_features": []
+}

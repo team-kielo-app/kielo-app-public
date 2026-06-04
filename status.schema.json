@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://team-kielo-app.github.io/kielo-app-public/status.schema.json",
+  "title": "Kielo public maintenance status",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["mode", "schema_version", "etag"],
+  "properties": {
+    "mode": {
+      "type": "string",
+      "enum": ["ok", "maintenance", "degraded"]
+    },
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "etag": {
+      "type": "string",
+      "minLength": 1
+    },
+    "starts_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ends_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "title_key": {
+      "type": "string",
+      "minLength": 1
+    },
+    "body_key": {
+      "type": "string",
+      "minLength": 1
+    },
+    "body_inline_en": {
+      "type": "string"
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["critical", "warning", "info"]
+    },
+    "blocking": {
+      "type": "boolean"
+    },
+    "dismiss_until_etag_change": {
+      "type": "boolean"
+    },
+    "disabled_features": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
